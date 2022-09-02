@@ -4,6 +4,8 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 function App() {
+  const stock = 10;
+
   return (
     <div className="App">
       <header>
@@ -12,7 +14,6 @@ function App() {
       <body>
         <ItemListContainer greeting='Bienvenidos a Mariana Cardús' />
       </body>
-
 
     </div>
   );

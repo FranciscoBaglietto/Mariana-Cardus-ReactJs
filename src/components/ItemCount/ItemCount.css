@@ -1,0 +1,12 @@
+.contenedor-items{
+    background-color: #ebc69a;
+    height: 70px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.boton{
+    width: 45%;
+    height: auto;
+    margin: 2px;
+}
