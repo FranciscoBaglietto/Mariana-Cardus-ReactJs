@@ -9,20 +9,23 @@ const ItemListContainer = ({ greeting }) => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
 
-    useEffect(()=>{
+    useEffect(() => {
         getFetch
-        .then((resp)=>setData(resp))
-        .catch((err)=>setData(err))
-        .finally(()=>setLoading(false))
-    },[])
+            .then((resp) => setData(resp))
+            .catch((err) => setData(err))
+            .finally(() => setLoading(false))
+    }, [])
 
 
     return (
         <>
             <h1 className='titulo'>{greeting}</h1>
-            <ItemCount/>
-            loading?<span>Cargando...</span>:
-            <ItemList productos={data}></ItemList>
+            <ItemCount />
+            
+            {
+                loading ? <span>Cargando...</span> :
+                    <ItemList productos={data}></ItemList>
+            }
 
         </>
     )
