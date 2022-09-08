@@ -31,5 +31,4 @@ const getFetch = new Promise((res, rej) => {
 })
 
 //exportamos solo la funcion de la promesa
-
 export default getFetch;

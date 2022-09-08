@@ -21,7 +21,7 @@ const ItemListContainer = ({ greeting }) => {
         <>
             <h1 className='titulo'>{greeting}</h1>
             <ItemCount />
-            
+
             {
                 loading ? <span>Cargando...</span> :
                     <ItemList productos={data}></ItemList>
