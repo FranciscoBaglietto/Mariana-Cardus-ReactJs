@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
+
 function App() {
   const stock = 10;
 
@@ -13,7 +14,7 @@ function App() {
       </header>
       <body>
         <ItemListContainer greeting='Bienvenidos a Mariana Cardús' />
-        
+       
       </body>
 
     </div>

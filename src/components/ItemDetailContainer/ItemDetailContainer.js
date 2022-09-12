@@ -1,35 +1,29 @@
+import ItemDetail from './ItemDetail/ItemDetail'
 import Data from '../Data/Data';
 import { useEffect, useState } from 'react';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
-const ItemListContainer = () => {
-    const [data, setData] = useState([])
-
-    //promesa
-    const getItem = new Promise((res, rej) => {
-        let condition = true
-
-        if (condition) {
-            setTimeout(() => {
-                res(Data[0])
-            }, 2000);
-        }
-        else {
-            rej(console.log("No hay datos de productos"))
-        }
-
-    })
-
-    useEffect(() => {
-        getItem
-            .then((resp) => setData(resp))
-            .catch((err) => setData(err))
-    }, [])
 
 const ItemDetailContainer = () => {
-  return (
-    <div><ItemList productos={data}></ItemList></div>
-  )
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        getFetch
+            .then((resp) => setData(resp))
+            .catch(error => console.log(error))
+            .finally(() => setLoading(false))
+    }, []);
+
+    return (
+        <>
+
+        {
+            loading ? <span>Cargando...</span> :
+                <ItemDetail item={data}></ItemDetail>
+        }
+
+    </>
+    )
 }
 
 export default ItemDetailContainer

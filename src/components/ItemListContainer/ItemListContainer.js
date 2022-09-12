@@ -3,6 +3,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import Data from '../Data/Data';
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 
 const ItemListContainer = ({ greeting }) => {
@@ -42,6 +43,7 @@ const ItemListContainer = ({ greeting }) => {
                 loading ? <span>Cargando...</span> :
                     <ItemList productos={data}></ItemList>
             }
+
 
         </>
     )
