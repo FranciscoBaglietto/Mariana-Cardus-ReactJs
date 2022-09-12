@@ -15,20 +15,8 @@ const Data = [
     },
 ]
 
-//promesa
-const getFetch = new Promise((res, rej) => {
-    let condition = true
 
-    if (condition) {
-        setTimeout(() => {
-            res(Data)
-        }, 2000);
-    }
-    else {
-        rej(console.log("No hay datos de productos"))
-    }
-
-})
 
 //exportamos solo la funcion de la promesa
-export default getFetch;
+export default Data;
+
