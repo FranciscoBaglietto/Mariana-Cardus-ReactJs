@@ -9,10 +9,8 @@ const ItemDetailContainer = () => {
 
     const getProduct = new Promise((resolve) => {
         setTimeout(() => {
-            resolve(Data.filter((prod) => prod.id === '1'))
+            resolve(Data.filter((prod) => prod.id === 1))
         }, 2000)
-    }).then((response) => {
-        setData(response);
     })
 
     useEffect(() => {
