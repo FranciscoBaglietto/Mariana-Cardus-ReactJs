@@ -7,8 +7,16 @@ const ItemDetailContainer = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true)
 
+    const getProduct = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(Data.filter((prod) => prod.id === '1'))
+        }, 2000)
+    }).then((response) => {
+        setData(response);
+    })
+
     useEffect(() => {
-        getFetch
+        getProduct
             .then((resp) => setData(resp))
             .catch(error => console.log(error))
             .finally(() => setLoading(false))
@@ -17,12 +25,12 @@ const ItemDetailContainer = () => {
     return (
         <>
 
-        {
-            loading ? <span>Cargando...</span> :
-                <ItemDetail item={data}></ItemDetail>
-        }
+            {
+                loading ? <span>Cargando...</span> :
+                    <ItemDetail item={data}></ItemDetail>
+            }
 
-    </>
+        </>
     )
 }
 

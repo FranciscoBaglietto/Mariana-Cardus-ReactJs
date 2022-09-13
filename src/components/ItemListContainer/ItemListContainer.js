@@ -6,6 +6,7 @@ import ItemList from '../ItemList/ItemList';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 
+
 const ItemListContainer = ({ greeting }) => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
@@ -43,7 +44,7 @@ const ItemListContainer = ({ greeting }) => {
                 loading ? <span>Cargando...</span> :
                     <ItemList productos={data}></ItemList>
             }
-
+            <ItemDetailContainer/>
 
         </>
     )
