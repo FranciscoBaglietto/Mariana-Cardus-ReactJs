@@ -3,6 +3,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import Data from '../Data/Data';
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
 
 
 
@@ -10,6 +11,14 @@ import ItemList from '../ItemList/ItemList';
 const ItemListContainer = ({ greeting }) => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
+    const { categoryName } = useParams()
+
+    let datos = `${data}`
+
+    if(categoryName) {
+        setData(`${datos}/category/${categoryName}`)
+    }
+
 
     //promesa
     const getFetch = new Promise((res, rej) => {

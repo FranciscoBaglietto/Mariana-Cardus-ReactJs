@@ -4,14 +4,16 @@ const Data = [
         nombre: "Antiage",
         precio: 200,
         img: "/antiage.jpg",
-        stock: 10
+        stock: 10,
+        category:"lineaFacial"
     },
     {
         id: 2,
         nombre: "Crema de Manos",
         precio: 300,
         img: "/crema-de-manos.jpg",
-        stock: 10
+        stock: 10,
+        category:"manos"
     },
 ]
 

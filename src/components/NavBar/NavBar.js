@@ -14,21 +14,38 @@ const NavBar = () => {
             <ul className="Enlaces-menu">
                 <li>
                     <NavLink
+                        to={'/category/lineaFacial'}
+                        style={({ isActive }) =>
+                            isActive
+                                ? { color: 'white' }
+                                : { color: 'black' }
+                        }
+                    >Linea Facial</NavLink>
+
+                </li>
+                <li>
+                    <NavLink
+                        to={'/category/manos'}
+                        style={({ isActive }) =>
+                            isActive
+                                ? { color: 'white' }
+                                : { color: 'black' }
+                        }
+                    >Manos</NavLink>
+
+                </li>
+                <li>
+                    <NavLink
                         to={'/contacto'}
                         style={({ isActive }) =>
-                        isActive 
-                        ?{color:'white'}
-                        :{color:'black'}
+                            isActive
+                                ? { color: 'white' }
+                                : { color: 'black' }
                         }
                     >Contacto</NavLink>
 
                 </li>
-                <li>
 
-                </li>
-                <li>
-
-                </li>
             </ul>
             <CartWidget />
             <button className="Ham" type="button">
