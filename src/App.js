@@ -1,24 +1,30 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+//ItemListCotainer contiene todos los productos en el Home '/'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 function App() {
-  const stock = 10;
 
   return (
-    <div className="App">
-      <header>
-        <NavBar />
-      </header>
-      <body>
-        <ItemListContainer greeting='Bienvenidos a Mariana Cardús' />
-        <ItemDetailContainer/>
-      </body>
 
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<ItemListContainer />} />
+        <Route path='/detail/:id' element={<ItemListContainer/>}/>
+        <Route path='/contacto' element={<div>Contacto</div>} />
+        <Route path='/category/:id' element={<ItemListContainer/>}/>
+        <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        
+
+      </Routes>
+
+    </BrowserRouter>
+
+
   );
 }
 

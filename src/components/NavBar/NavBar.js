@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import logo from '../../asset/image/logo.png';
 import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css'
@@ -11,9 +12,23 @@ const NavBar = () => {
                 <img className="Logo" src={logo} alt="logo"></img>
             </a>
             <ul className="Enlaces-menu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PRODUCTOS</a></li>
-                <li><a href="#">CONTACTO</a></li>
+                <li>
+                    <NavLink
+                        to={'/contacto'}
+                        style={({ isActive }) =>
+                        isActive 
+                        ?{color:'white'}
+                        :{color:'black'}
+                        }
+                    >Contacto</NavLink>
+
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                </li>
             </ul>
             <CartWidget />
             <button className="Ham" type="button">

@@ -1,9 +1,10 @@
 // agregar una img del carrito
+import { Link } from 'react-router-dom';
 import imgCarrito from '../../asset/image/carrito.png'
 import './CartWidget.css'
 
 const CartWidget = () => {
-    return <img src={imgCarrito} alt="carrito" className='carritoImg'></img>
+    return <Link to={'/'}><img src={imgCarrito} alt="carrito" className='carritoImg'></img></Link>
 };
 
 export default CartWidget;
