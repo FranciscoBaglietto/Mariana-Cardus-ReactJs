@@ -1,5 +1,29 @@
 .img-producto{
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.containerItem{
+    margin: 1rem;
+    text-align: center;
+    justify-items: auto;
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 11px;
+    box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.445);
+    background-color: #ebc79a23;
+}
+
+.text-item{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: MuseoSans-300;
+    font-weight: 500;
+    margin: 5px;
+    color: #575756;
+}
+
+.precio-item{
+    font-weight: 700;
 }

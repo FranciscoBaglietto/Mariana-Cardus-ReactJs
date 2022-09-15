@@ -8,9 +8,10 @@ const NavBar = () => {
     return (
 
         <nav className="Contenedor-navbar">
-            <a href="#">
+            <NavLink to={'/'}>
                 <img className="Logo" src={logo} alt="logo"></img>
-            </a>
+            </NavLink>
+            
             <ul className="Enlaces-menu">
                 <li>
                     <NavLink

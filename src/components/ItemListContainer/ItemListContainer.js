@@ -13,10 +13,10 @@ const ItemListContainer = ({ greeting }) => {
     const [loading, setLoading] = useState(true)
     const { categoryName } = useParams()
 
-    let datos = `${data}`
+    
 
     if(categoryName) {
-        setData(`${datos}/category/${categoryName}`)
+        setData(`${data}/category/${categoryName}`)
     }
 
 
@@ -47,12 +47,11 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <h1 className='titulo'>{greeting}</h1>
-            <ItemCount />
-
             {
                 loading ? <span>Cargando...</span> :
                     <ItemList productos={data}></ItemList>
             }
+            <ItemCount />
 
         </>
     )
