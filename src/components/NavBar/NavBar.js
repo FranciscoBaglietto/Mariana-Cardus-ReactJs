@@ -18,7 +18,7 @@ const NavBar = () => {
                         to={'/category/lineaFacial'}
                         style={({ isActive }) =>
                             isActive
-                                ? { color: 'white' }
+                                ? { color: '#f0a54a' }
                                 : { color: 'black' }
                         }
                     >Linea Facial</NavLink>
@@ -29,7 +29,7 @@ const NavBar = () => {
                         to={'/category/manos'}
                         style={({ isActive }) =>
                             isActive
-                                ? { color: 'white' }
+                                ? { color: '#f0a54a' }
                                 : { color: 'black' }
                         }
                     >Manos</NavLink>
@@ -40,7 +40,7 @@ const NavBar = () => {
                         to={'/contacto'}
                         style={({ isActive }) =>
                             isActive
-                                ? { color: 'white' }
+                                ? { color: '#f0a54a' }
                                 : { color: 'black' }
                         }
                     >Contacto</NavLink>

@@ -15,6 +15,8 @@
 .nombre-producto{
     font-size: 1.5rem;
     font-weight: 500;
+    color: #575756e2;
+    text-shadow: 1px 0px 12px rgba(0, 0, 0, 0.445);
 }
 .descripcion-producto{
     font-family: MuseoSans-300;
