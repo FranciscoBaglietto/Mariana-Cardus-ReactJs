@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from '../Item/Item'
 import { Link } from 'react-router-dom'
+import '../ItemList/ItemList.css'
 
 const ItemList = ({ productos }) => {
   return (

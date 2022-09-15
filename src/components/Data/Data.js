@@ -3,7 +3,7 @@ const Data = [
         id: 1,
         nombre: "Antiage",
         precio: 100,
-        img: "/antiage.jpg",
+        img: "imagenes/antiage.jpg",
         stock: 10,
         category:"lineaFacial"
     },
@@ -11,7 +11,7 @@ const Data = [
         id: 2,
         nombre: "Crema de Manos",
         precio: 2000,
-        img: "/crema-de-manos.jpg",
+        img: "imagenes/crema-de-manos.jpg",
         stock: 10,
         category:"manos"
     },
@@ -19,7 +19,7 @@ const Data = [
         id: 3,
         nombre: "Crema de Manos",
         precio: 3000,
-        img: "/crema-de-manos2.jpg",
+        img: "imagenes/crema-de-manos2.jpg",
         stock: 10,
         category:"manos"
     },
@@ -27,7 +27,7 @@ const Data = [
         id: 4,
         nombre: "Agua Micelar",
         precio: 4000,
-        img: "/agua-micelar.jpg",
+        img: "imagenes/agua-micelar.jpg",
         stock: 10,
         category:"lineaFacial"
     },
@@ -35,7 +35,7 @@ const Data = [
         id: 5,
         nombre: "Crema de Corporal",
         precio: 4500,
-        img: "/crema-corporal.jpg",
+        img: "imagenes/crema-corporal.jpg",
         stock: 10,
         category:"cremaCorporal"
     },
@@ -43,7 +43,7 @@ const Data = [
         id: 6,
         nombre: "Protector Solar",
         precio: 3500,
-        img: "/protector-solar.jpg",
+        img: "imagenes/protector-solar.jpg",
         stock: 10,
         category:"lineaFacial"
     },
