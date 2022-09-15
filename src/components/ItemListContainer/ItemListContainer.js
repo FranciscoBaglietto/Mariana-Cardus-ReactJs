@@ -15,9 +15,7 @@ const ItemListContainer = ({ greeting }) => {
 
     
 
-    if(categoryName) {
-        setData(`${data}/category/${categoryName}`)
-    }
+   
 
 
     //promesa
@@ -29,19 +27,22 @@ const ItemListContainer = ({ greeting }) => {
                 res(Data)
             }, 2000);
         }
-        else {
-            rej(console.log("No hay datos de productos"))
-        }
-
     })
 
 
     useEffect(() => {
         getFetch
-            .then((resp) => setData(resp))
+            .then((resp) => {
+                if(categoryName){
+                    const response = resp.filter((response) => response.category === categoryName)
+                    setData(response);
+                }else{
+                    setData(resp)
+                }
+            })
             .catch((err) => setData(err))
             .finally(() => setLoading(false))
-    }, [])
+    }, [categoryName])
 
 
     return (
