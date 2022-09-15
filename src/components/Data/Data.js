@@ -3,49 +3,55 @@ const Data = [
         id: "1",
         nombre: "Antiage",
         precio: 100,
-        img: "imagenes/antiage.jpg",
+        img: "/antiage.jpg",
+        descripcion: "Tratamiento boost antiage que favorece la renovación celular y combate los signos del envejecimiento.",
         stock: 10,
-        category:"lineaFacial"
+        category: "lineaFacial"
     },
     {
         id: "2",
         nombre: "Crema de Manos",
         precio: 2000,
-        img: "imagenes/crema-de-manos.jpg",
+        img: "/crema-de-manos.jpg",
+        descripcion: "Tratamiento boost antiage que favorece la renovación celular y combate los signos del envejecimiento.",
         stock: 10,
-        category:"manos"
+        category: "manos"
     },
     {
         id: "3",
         nombre: "Crema de Manos",
         precio: 3000,
-        img: "imagenes/crema-de-manos2.jpg",
+        img: "/crema-de-manos2.jpg",
+        descripcion: "Tratamiento boost antiage que favorece la renovación celular y combate los signos del envejecimiento.",
         stock: 10,
-        category:"manos"
+        category: "manos"
     },
     {
         id: "4",
         nombre: "Agua Micelar",
         precio: 4000,
-        img: "imagenes/agua-micelar.jpg",
+        img: "/agua-micelar.jpg",
+        descripcion: "Tratamiento boost antiage que favorece la renovación celular y combate los signos del envejecimiento.",
         stock: 10,
-        category:"lineaFacial"
+        category: "lineaFacial"
     },
     {
         id: "5",
         nombre: "Crema de Corporal",
         precio: 4500,
-        img: "imagenes/crema-corporal.jpg",
+        img: "/crema-corporal.jpg",
+        descripcion: "Tratamiento boost antiage que favorece la renovación celular y combate los signos del envejecimiento.",
         stock: 10,
-        category:"cremaCorporal"
+        category: "cremaCorporal"
     },
     {
         id: "6",
         nombre: "Protector Solar",
         precio: 3500,
-        img: "imagenes/protector-solar.jpg",
+        img: "/protector-solar.jpg",
+        descripcion: "Tratamiento boost antiage que favorece la renovación celular y combate los signos del envejecimiento.",
         stock: 10,
-        category:"lineaFacial"
+        category: "lineaFacial"
     },
 ]
 

@@ -1,12 +1,14 @@
 .contenedor-items{
-    background-color: #ebc69a;
+    background-color: #ebc79a97;
     height: 70px;
-    width: 120px;
+    width: 130px;
+    margin: 10px auto;
     border-radius: 10px;
+    border: 1px solid #ebc79a97;
 }
 
 .boton{
     width: 45%;
-    height: auto;
     margin: 2px;
+    border-radius: 10px;
 }

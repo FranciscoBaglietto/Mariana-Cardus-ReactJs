@@ -1,5 +1,4 @@
 import './ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount';
 import Data from '../Data/Data';
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
@@ -13,9 +12,6 @@ const ItemListContainer = ({ greeting }) => {
     const [loading, setLoading] = useState(true)
     const { categoryName } = useParams()
 
-    
-
-   
 
 
     //promesa
@@ -52,7 +48,6 @@ const ItemListContainer = ({ greeting }) => {
                 loading ? <span>Cargando...</span> :
                     <ItemList productos={data}></ItemList>
             }
-            <ItemCount />
 
         </>
     )

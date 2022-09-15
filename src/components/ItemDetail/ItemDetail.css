@@ -1,0 +1,22 @@
+.containerDetail{
+    margin: 1rem;
+    width: 14rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    background-color: #ebc79a23;
+}
+
+.img-producto{
+    width: 100%;
+}
+
+.nombre-producto{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.descripcion-producto{
+    font-family: MuseoSans-300;
+    margin: 15px auto;
+}
