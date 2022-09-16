@@ -4,7 +4,7 @@ import imgCarrito from '../../asset/image/carrito.png'
 import './CartWidget.css'
 
 const CartWidget = () => {
-    return <Link to={'/'}><img src={imgCarrito} alt="carrito" className='carritoImg'></img></Link>
+    return <Link to={'/cart'}><img src={imgCarrito} alt="carrito" className='carritoImg'></img></Link>
 };
 
 export default CartWidget;
