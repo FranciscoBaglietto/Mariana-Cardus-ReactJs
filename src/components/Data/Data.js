@@ -37,7 +37,7 @@ const Data = [
     },
     {
         id: "5",
-        nombre: "Crema de Corporal",
+        nombre: "Crema Corporal",
         precio: 4500,
         img: "/crema-corporal.jpg",
         descripcion: "Tratamiento boost antiage que favorece la renovación celular y combate los signos del envejecimiento.",

@@ -1,10 +1,7 @@
-import { useState } from "react";
 import './ItemCount.css';
 
-const ItemCount = () => {
+const ItemCount = ( {setItems, items}) => {
     const stock = 10;
-
-    const [items, setItems] = useState(0);
 
     const sumar = () => items <= stock - 1 ? setItems(items + 1) : alert('Es el limite.')
     const restar = () => items > 0 ? setItems(items - 1) : alert('No se puede numeros negativos.')

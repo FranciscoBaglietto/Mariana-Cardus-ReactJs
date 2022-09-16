@@ -11,8 +11,19 @@ const NavBar = () => {
             <NavLink to={'/'}>
                 <img className="Logo" src={logo} alt="logo"></img>
             </NavLink>
-            
+
             <ul className="Enlaces-menu">
+                <li>
+                    <NavLink
+                        to={'/'}
+                        style={({ isActive }) =>
+                            isActive
+                                ? { color: '#f0a54a' }
+                                : { color: 'black' }
+                        }
+                    >Home</NavLink>
+
+                </li>
                 <li>
                     <NavLink
                         to={'/category/lineaFacial'}
