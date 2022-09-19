@@ -6,17 +6,19 @@ import { Link } from "react-router-dom";
 const ItemDetail = ({ item }) => {
     const [items, setItems] = useState(0);
 
-    const handleClick = () =>{
+    const handleClick = () => {
         console.log(items)
     }
 
     return (
-        <div className="containerDetail">
-            <img className='img-producto' src={item[0].img} />
-            <h1 className="nombre-producto">{item[0].nombre}</h1>
-            <p className="descripcion-producto">{item[0].descripcion}</p>
-            <ItemCount setItems={setItems} items={items}/>
-            <Link to={'/cart'} onClick={handleClick}>Ir al carrito</Link>
+        <div className="main-detail">
+            <div className="containerDetail">
+                <img className='img-producto' src={item[0].img} />
+                <h1 className="nombre-producto">{item[0].nombre}</h1>
+                <p className="descripcion-producto">{item[0].descripcion}</p>
+                <ItemCount setItems={setItems} items={items} />
+                <Link to={'/cart'} onClick={handleClick}>Ir al carrito</Link>
+            </div>
         </div>
     )
 }

@@ -22,3 +22,10 @@
     font-family: MuseoSans-300;
     margin: 15px auto;
 }
+
+.main-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
