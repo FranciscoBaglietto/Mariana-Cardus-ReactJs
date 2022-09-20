@@ -11,7 +11,7 @@ const ItemDetail = ({ item }) => {
 
 
     function onAdd ( item){
-        addToCart(item, items)
+        addToCart(item[0], items)
     }
 
     return (
