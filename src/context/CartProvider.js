@@ -7,12 +7,12 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     const addToCart = (item, cantidad) => {
-        if(isInCart(item.id)){
-            alert('Ya esta en el carrito')
-        }else{
+        const inCart = isInCart(item.id)
+        if(inCart){
+            inCart.cantidad= inCart.cantidad + cantidad 
+        } else{
             setCart([...cart, {...item, cantidad}])
         }
-
         setCart([...cart, {...item, cantidad}]);
         console.log('cart', [...cart, {...item, cantidad}])
     }
