@@ -7,4 +7,4 @@ const CartWidget = () => {
     return <Link to={'/cart'}><img src={imgCarrito} alt="carrito" className='carritoImg'></img></Link>
 };
 
-export default CartWidget;
+export default CartWidget; 
