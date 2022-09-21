@@ -1,3 +1,11 @@
 .carritoImg{
     width: 30px;
 }
+.spanCarrito {
+    color: black;
+    position: relative;
+    top: -22px;
+    background-color: red;
+    border-radius: 5px; 
+    padding: 1px 3px;
+}

@@ -44,7 +44,6 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <>
-            <Link to="/cart">Carrito</Link>
             <h1 className='titulo'>{greeting}</h1>
             {
                 loading ? <span>Cargando...</span> :
