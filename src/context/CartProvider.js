@@ -13,8 +13,6 @@ const CartProvider = ({ children }) => {
         } else {
             setCart([...cart, { ...item, cantidad }])
         }
-        setCart([...cart, { ...item, cantidad }]);
-        console.log('cart', [...cart, { ...item, cantidad }])
     }
 
     const isInCart = (id) => {

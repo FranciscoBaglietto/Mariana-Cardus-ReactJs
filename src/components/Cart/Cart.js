@@ -10,13 +10,13 @@ const Cart = () => {
     return (
         <>
             <h1>Carrito de Compra</h1>
-            
+
             <div className="mainCart">
                 {cart.length === 0 ? (
-                    <>
-                        <h2>No hay productos en tu carrito</h2>
+                    <div>
+                        <h2>No hay productos en carrito</h2>
                         <Link to={'/'}>Volver a Comprar</Link>
-                    </>
+                    </div>
                 ) : (
                     <>
                         {cart.map((item) => (
