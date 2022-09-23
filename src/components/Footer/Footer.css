@@ -1,0 +1,6 @@
+.contenedorFooter{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e2c3ae50;
+    margin-top: auto;
+}
