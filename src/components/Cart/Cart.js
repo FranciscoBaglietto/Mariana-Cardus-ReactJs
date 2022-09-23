@@ -9,7 +9,7 @@ const Cart = () => {
 
     return (
         <>
-            <h1>Carrito de Compra</h1>
+            <h1 className="tituloCarritoCompras">Carrito de Compra</h1>
 
             <div className="mainCart">
                 {cart.length === 0 ? (
@@ -26,7 +26,7 @@ const Cart = () => {
                                 <h3 className="nombreProducto">{item.nombre}</h3>
                                 <p>${item.precio}</p>
                                 <p>{item.cantidad}</p>
-                                <button onClick={() => removeItem(item.id)}>Eliminar producto</button>
+                                <button className="botones" onClick={() => removeItem(item.id)}>Eliminar producto</button>
                                 <p>Total: ${item.cantidad * item.precio}</p>
                             </div>
 

@@ -21,8 +21,7 @@ const ItemDetail = ({ item }) => {
                 <h1 className="nombre-producto">{item[0].nombre}</h1>
                 <p className="descripcion-producto">{item[0].descripcion}</p>
                 <ItemCount setItems={setItems} items={items} />
-
-                <button onClick={() => onAdd(item)}>Agregar al carrito</button>
+                <button className="botones" onClick={() => onAdd(item)}>Agregar al carrito</button>
             </div>
         </div>
     )
