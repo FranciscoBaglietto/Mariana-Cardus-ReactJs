@@ -2,7 +2,8 @@ import './ItemListContainer.css'
 import Data from '../Data/Data';
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { getFirestore, getDocs, collection, query, where } from "firebase/firestore"
 
 
 
@@ -21,7 +22,26 @@ const ItemListContainer = ({ greeting }) => {
 
         if (condition) {
             setTimeout(() => {
-                res(Data)
+                const db = getFirestore();
+                const querySnapshot = collection(db, 'items')
+                const queryFilter = query(querySnapshot, where("categotyId", "==", categoryName))
+                if(categoryName) {
+                    getDocs(queryFilter).then((res) => {
+                        const list = res.docs.map((productos) => {
+                            return { id: productos.id, ...productos.data() }
+                        });
+                        setData(list);
+                    })
+                } else{
+                    getDocs(querySnapshot).then((res) => {
+                        const list = res.docs.map((productos) => {
+                            return { id: productos.id, ...productos.data() }
+                        });
+                        setData(list);
+                    })
+                }
+                
+                
             }, 2000);
         }
     })
@@ -30,10 +50,10 @@ const ItemListContainer = ({ greeting }) => {
     useEffect(() => {
         getFetch
             .then((resp) => {
-                if(categoryName){
+                if (categoryName) {
                     const response = resp.filter((response) => response.category === categoryName)
                     setData(response);
-                }else{
+                } else {
                     setData(resp)
                 }
             })
@@ -49,7 +69,7 @@ const ItemListContainer = ({ greeting }) => {
                 loading ? <span>Cargando...</span> :
                     <ItemList productos={data}></ItemList>
             }
-            
+
 
         </>
     )
