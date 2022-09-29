@@ -13,7 +13,7 @@ const ItemDetail = ({ item }) => {
 
 
     function onAdd ( item){
-        addToCart(item[0], items)
+        addToCart(item, items)
         setIrCarrito(false)
     }
 
