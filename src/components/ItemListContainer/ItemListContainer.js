@@ -14,9 +14,7 @@ const ItemListContainer = ({ greeting }) => {
     const { categoryName } = useParams()
 
 
-
-    //promesa
-    const getFetch = () => {
+    const getProduct = () => {
         const db = getFirestore();
         const querySnapshot = collection(db, 'items')
         if (categoryName) {
@@ -37,23 +35,13 @@ const ItemListContainer = ({ greeting }) => {
                 })
             }
 
-
         }
     }
 
 
     useEffect(() => {
-        getFetch();
-        /*  .then((resp) => {
-              if (categoryName) {
-                  const response = resp.filter((response) => response.category === categoryName)
-                  setData(response);
-              } else {
-                  setData(resp)
-              }
-          })
-          .catch((err) => setData(err))
-          .finally(() => setLoading(false))*/
+        getProduct();
+
     }, [categoryName])
 
 
