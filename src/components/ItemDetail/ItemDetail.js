@@ -20,16 +20,15 @@ const ItemDetail = ({ item }) => {
     return (
         <div className="main-detail">
             <div className="containerDetail">
-                <img className='img-producto' src={item[0].img} />
-                <h1 className="nombre-producto">{item[0].nombre}</h1>
-                <p className="descripcion-producto">{item[0].descripcion}</p>
+                <img className='img-producto' src={item.img} />
+                <h1 className="nombre-producto">{item.nombre}</h1>
+                <p className="descripcion-producto">{item.descripcion}</p>
                 <ItemCount setItems={setItems} items={items} />
                 {
                     (irCarrito) ? <button className="botones" onClick={() => onAdd(item)}>Agregar al carrito</button> : <Link to={'/cart'}>Ir al carrito</Link>
                 }
                 
-                
-                
+
             </div>
         </div>
     )

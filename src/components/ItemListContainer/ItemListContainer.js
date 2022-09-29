@@ -40,7 +40,6 @@ const ItemListContainer = ({ greeting }) => {
         <>
             <h1 className='titulo'>{greeting}</h1>
             <ItemList productos={productoLista}></ItemList>
-
         </>
     )
 };
