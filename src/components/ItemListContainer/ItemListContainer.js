@@ -14,22 +14,24 @@ const ItemListContainer = ({ greeting }) => {
     const { categoryName } = useParams()
 
 
-    const getProduct = () => {
-        console.log("me ejecute");
+    useEffect(() => {
         const db = getFirestore();
         const querySnapshot = collection(db, 'items');
 
-        getDocs(querySnapshot).then((res) => {
-            console.log(res)
-            const list = res.docs.map((productos) =>{
-                return {id: productos.id, ...productos.data()}
+        if (categoryName) {
+            const queryFilter = query(querySnapshot, where("categoryId", "==", categoryName));
+            getDocs(queryFilter).then((res) => {
+                setProductosLista(
+                    res.docs.map((product) => ({ id: product.id, ...product.data() }))
+                )
             });
-            setProductosLista(list)
-        })
-    }
-
-    useEffect(() => {
-        getProduct();
+        } else {
+            getDocs(querySnapshot).then((res) =>
+                setProductosLista(
+                    res.docs.map((product) => ({ id: product.id, ...product.data() }))
+                )
+            )
+        }
 
     }, [categoryName])
 
