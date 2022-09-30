@@ -6,8 +6,6 @@ import { getFirestore, getDocs, collection, query, where } from "firebase/firest
 
 
 
-
-
 const ItemListContainer = ({ greeting }) => {
     const [productoLista, setProductosLista] = useState([])
     const { categoryName } = useParams()
@@ -15,22 +13,15 @@ const ItemListContainer = ({ greeting }) => {
 
     useEffect(() => {
         const db = getFirestore();
-        const querySnapshot = collection(db, 'items');
+        const queryBase = collection(db, 'items')
+        const querySnapshot = categoryName ? query(queryBase, where("categoryId", "==", categoryName)) : queryBase;
 
-        if (categoryName) {
-            const queryFilter = query(querySnapshot, where("categoryId", "==", categoryName));
-            getDocs(queryFilter).then((res) => {
-                setProductosLista(
-                    res.docs.map((product) => ({ id: product.id, ...product.data() }))
-                )
-            });
-        } else {
-            getDocs(querySnapshot).then((res) =>
-                setProductosLista(
-                    res.docs.map((product) => ({ id: product.id, ...product.data() }))
-                )
+        getDocs(querySnapshot).then((res) =>
+            setProductosLista(
+                res.docs.map((product) => ({ id: product.id, ...product.data() }))
             )
-        }
+        )
+
 
     }, [categoryName])
 

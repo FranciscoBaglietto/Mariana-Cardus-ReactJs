@@ -18,23 +18,17 @@ const CartProvider = ({ children }) => {
     const isInCart = (id) => {
         return cart.find((item) => item.id === id);
     }
+
     const clear = () => {
         setCart([]);
     }
+
     const removeItem = (itemId) => {
-        let nuevoArreglo = [];
-        cart.forEach(producto => {
-            if (producto.id === itemId) {
-                console.log(producto)
-            } else{
-                nuevoArreglo.push(producto) 
-            }
-        })
-        setCart(nuevoArreglo)
+        setCart(cart.filter((producto) => producto.id !== itemId));
     }
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeItem }}>
+        <CartContext.Provider value={{ cart, addToCart, removeItem, clear }}>
             {children}
         </CartContext.Provider>
     )
