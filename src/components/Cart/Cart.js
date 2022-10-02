@@ -12,9 +12,9 @@ const Cart = () => {
         const db = getFirestore();
         const order = {
             buyer: {
-                name: 'Juan',
-                phone: '12346',
-                email: 'juantest@gmail.com'
+                name: '',
+                phone: 0,
+                email: '',
             },
             items: cart,
             total: cart.reduce((valorPasado, valorActual) => valorPasado + (valorActual.precio * valorActual.cantidad), 0),
@@ -53,6 +53,20 @@ const Cart = () => {
                         ))}
                     </>
                 )}
+                <div>
+                    <div>
+                        <label>Nombre</label>
+                        <input type='text'/>
+                    </div>
+                    <div>
+                        <label>Telefono</label>
+                        <input type='number' />
+                    </div>
+                    <div>
+                        <label>Correo</label>
+                        <input type='email' />
+                    </div>
+                </div>
                 <div>
                     <button onClick={createOrder}>Crear orden</button>
                 </div>
