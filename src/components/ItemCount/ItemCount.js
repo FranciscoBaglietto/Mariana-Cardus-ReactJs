@@ -9,7 +9,7 @@ const ItemCount = ( {setItems, items}) => {
     return (
         <>
             <div className="contenedor-items">
-                <div className="texto">Tengo {items} items.</div>
+                <div className="texto">Seleccionado {items}</div>
                 <button className="boton" onClick={sumar}>+</button>
                 <button className="boton" onClick={restar}>-</button>
                 <p className="texto">Stock {stock}</p>

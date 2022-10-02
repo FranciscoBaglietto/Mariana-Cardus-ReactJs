@@ -1,11 +1,12 @@
 .containerDetail{
-    margin: 1rem;
+    margin: 2rem;
     width: 14rem;
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
     display: inline-block;
     background-color: #ebc79a23;
+    height: 52vh;
 }
 
 .img-producto{
@@ -28,4 +29,13 @@
     justify-content: center;
     align-items: center;
     margin: 1rem;
+}
+
+.botonIrAlCarrito{
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-family: MuseoSans-300;
+    color: black;
+    padding: 2px 4px;
 }

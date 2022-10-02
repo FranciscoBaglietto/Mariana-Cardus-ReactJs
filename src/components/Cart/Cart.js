@@ -53,22 +53,22 @@ const Cart = () => {
                         ))}
                     </>
                 )}
-                <div>
-                    <div>
+                <div className="formOrdenes">
+                    <div className="formInput">
                         <label>Nombre</label>
-                        <input type='text'/>
+                        <input type='text' />
                     </div>
-                    <div>
+                    <div className="formInput">
                         <label>Telefono</label>
                         <input type='number' />
                     </div>
-                    <div>
+                    <div className="formInput">
                         <label>Correo</label>
                         <input type='email' />
                     </div>
-                </div>
-                <div>
-                    <button onClick={createOrder}>Crear orden</button>
+                    <div >
+                        <button className="botonOrden" onClick={createOrder}>Crear orden</button>
+                    </div>
                 </div>
             </div>
         </>

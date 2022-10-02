@@ -25,7 +25,7 @@ const ItemDetail = ({ item }) => {
                 <p className="descripcion-producto">{item.descripcion}</p>
                 <ItemCount setItems={setItems} items={items} />
                 {
-                    (irCarrito) ? <button className="botones" onClick={() => onAdd(item)}>Agregar al carrito</button> : <Link to={'/cart'}>Ir al carrito</Link>
+                    (irCarrito) ? <button className="botones" onClick={() => onAdd(item)}>Agregar al carrito</button> : <Link className="botonIrAlCarrito" to={'/cart'}>Ir al carrito</Link>
                 }
                 
 
