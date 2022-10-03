@@ -21,7 +21,7 @@ const Cart = () => {
             date: moment().format(),
         };
         const query = collection(db, 'orders');
-        addDoc(query, order).then(({ id }) => alert('Felicidades por tu compra'))
+        addDoc(query, order).then(({ id }) => alert(`Felicidades por tu compra. Numero de orden: ${id}`))
             .catch(() => alert('Tu compra no pudo ser realizada'))
 
     };
