@@ -1,3 +1,15 @@
+## _Este es un proyecto para el curso de ReactJs en la plataforma de CoderHouse_
+
+## Autor 
+- Francisco Baglietto Piermattei
+
+## Demo
+
+## Descripción 
+
+-Es una e-commerce desarrollada para la venta de productos de cosmetica.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
