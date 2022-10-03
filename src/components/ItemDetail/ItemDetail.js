@@ -22,7 +22,7 @@ const ItemDetail = ({ item }) => {
             <div className="containerDetail">
                 <img className='img-producto' src={item.img} />
                 <h1 className="nombre-producto">{item.nombre}</h1>
-                <p className="descripcion-producto">{item.descripcion}</p>
+                <p className="descripcion-producto">{item.descripción}</p>
                 <ItemCount setItems={setItems} items={items} />
                 {
                     (irCarrito) ? <button className="botones" onClick={() => onAdd(item)}>Agregar al carrito</button> : <Link className="botonIrAlCarrito" to={'/cart'}>Ir al carrito</Link>
