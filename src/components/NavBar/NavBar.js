@@ -46,17 +46,6 @@ const NavBar = () => {
                     >Manos</NavLink>
 
                 </li>
-                <li>
-                    <NavLink
-                        to={'/contacto'}
-                        style={({ isActive }) =>
-                            isActive
-                                ? { color: '#f0a54a' }
-                                : { color: 'black' }
-                        }
-                    >Contacto</NavLink>
-
-                </li>
 
             </ul>
             <CartWidget />

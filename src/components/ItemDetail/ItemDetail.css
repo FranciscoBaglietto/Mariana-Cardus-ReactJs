@@ -6,11 +6,14 @@
     text-align: center;
     display: inline-block;
     background-color: #ebc79a23;
+    padding: .6rem;
+    
     
 }
 
 .img-producto{
     width: 100%;
+    border-radius: 10px;
 }
 
 .nombre-producto{
@@ -37,5 +40,5 @@
     border: 2px solid black;
     font-family: MuseoSans-300;
     color: black;
-    padding: 2px 4px;
+    padding: 1px 4px;
 }
