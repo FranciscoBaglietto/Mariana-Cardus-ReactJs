@@ -6,8 +6,7 @@
 ## Demo
 
 ## Descripción 
-
--Es una e-commerce desarrollada para la venta de productos de cosmetica.
+- Es una e-commerce desarrollada para la venta de productos de cosmetica.
 
 
 # Getting Started with Create React App
