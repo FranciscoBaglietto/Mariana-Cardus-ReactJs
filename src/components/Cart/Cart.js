@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/cartContext"
 import '../Cart/Cart.css'
 import moment from "moment/moment";
-import { collection, addDoc, firestore, getFirestore } from "firebase/firestore";
+import { collection, addDoc, getFirestore } from "firebase/firestore";
 
 const Cart = () => {
-    const { cart, removeItem } = useContext(CartContext);
+    const { cart, removeItem, totalPrecioCart } = useContext(CartContext);
 
     const createOrder = () => {
         const db = getFirestore();
@@ -49,10 +49,14 @@ const Cart = () => {
                                 <p>Total: ${item.cantidad * item.precio}</p>
                             </div>
 
-
                         ))}
+
+                        {totalPrecioCart() > 0 ? <h3>Total: ${totalPrecioCart()}</h3> : ""}
+
                     </>
                 )}
+
+
                 <div className="formOrdenes">
                     <div className="formInput">
                         <label>Nombre</label>
