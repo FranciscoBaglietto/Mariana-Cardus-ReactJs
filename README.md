@@ -8,6 +8,7 @@
 ## Descripción 
 - Es una e-commerce desarrollada para la venta de productos de cosmetica.
 
+github.com/public/demo.gif
 
 # Getting Started with Create React App
 
