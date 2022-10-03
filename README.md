@@ -5,10 +5,10 @@
 
 ## Demo
 
+![demo](https://user-images.githubusercontent.com/103646725/193486221-2f227f69-3b29-4a64-9a08-377c1b10ec68.gif)
+
 ## Descripción 
 - Es una e-commerce desarrollada para la venta de productos de cosmetica.
-
-github.com/public/demo.gif
 
 # Getting Started with Create React App
 
