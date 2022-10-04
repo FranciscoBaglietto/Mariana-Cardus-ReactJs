@@ -8,6 +8,9 @@
     background-color: #ebc79a23;
     box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.329);
 }
+.contenedorCart:hover{
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.527);
+}
 
 .imgCarrito {
     width: 100%;

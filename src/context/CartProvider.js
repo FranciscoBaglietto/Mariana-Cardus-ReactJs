@@ -22,6 +22,7 @@ const CartProvider = ({ children }) => {
 
     const clear = () => {
         setCart([]);
+        Swal.fire(`El carrito se vacio con exito!`)
     }
 
     const removeItem = (itemId) => {
