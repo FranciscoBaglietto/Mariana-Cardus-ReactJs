@@ -26,22 +26,7 @@ const CartProvider = ({ children }) => {
 
     const removeItem = (itemId) => {
         setCart(cart.filter((producto) => producto.id !== itemId))
-        Swal.fire({
-            title: 'Seguro que quieres eliminar el producto?',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, eliminalo!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                Swal.fire(
-                    'Eliminado!',
-                    'Su producto fue eliminado exitosamente.',
-                    'success'
-                )
-            }
-        })
+        Swal.fire(`Producto eliminado con exito!`)
     }
     const totalPrecioCart = () => {
         return cart.reduce((acc, cartItem) => acc + cartItem.precio * cartItem.cantidad, 0);

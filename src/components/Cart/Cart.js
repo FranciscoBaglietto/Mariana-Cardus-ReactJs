@@ -7,7 +7,7 @@ import { collection, addDoc, getFirestore } from "firebase/firestore";
 import Swal from "sweetalert2";
 
 const Cart = () => {
-    const { cart, removeItem, totalPrecioCart } = useContext(CartContext);
+    const { cart, removeItem, totalPrecioCart, clear } = useContext(CartContext);
 
     const createOrder = () => {
         const db = getFirestore();
@@ -51,8 +51,10 @@ const Cart = () => {
                             </div>
 
                         ))}
-
-                        {totalPrecioCart() > 0 ? <h3 className="totalPrecio">Total: ${totalPrecioCart()}</h3> : ""}
+                        <div className="contenedorVaciar">
+                            {totalPrecioCart() > 0 ? <h3 className="totalPrecio">Total: ${totalPrecioCart()}</h3> : ""}
+                            <button className="botonVaciar" onClick={() => clear()}>Vaciar Carrito</button>
+                        </div>
 
                     </>
                 )}
