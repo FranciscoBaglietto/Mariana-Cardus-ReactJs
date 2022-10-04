@@ -4,7 +4,7 @@
 - Francisco Baglietto Piermattei
 
 ## Demo
-
+![Mariana Cardus](https://user-images.githubusercontent.com/103646725/193947630-1c933bee-6cf5-40d3-b710-146546396881.gif)
 
 ## Descripción 
 - Es una e-commerce desarrollada para la venta de productos de cosmetica.
