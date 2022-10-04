@@ -9,6 +9,14 @@
 ## Descripción 
 - Es una e-commerce desarrollada para la venta de productos de cosmetica.
 
+## Librerias utilizadas en el proyecto.
+- ReactJs
+- Create React App
+- SweetAlert2
+- Firebase
+- React Router
+- Router
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
