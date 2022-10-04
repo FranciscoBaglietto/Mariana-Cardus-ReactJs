@@ -20,6 +20,10 @@ nav {
 .Enlaces-menu li{
     padding: 0 40px;
     list-style: none;
+    transition: transform 1s;
+}
+.Enlaces-menu li:hover{
+    transform: scale(1.1);
 }
 .Enlaces-menu li a{
     text-decoration: none;

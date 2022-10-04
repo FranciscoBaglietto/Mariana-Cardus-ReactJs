@@ -1,9 +1,10 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/cartContext"
 import '../Cart/Cart.css'
 import moment from "moment/moment";
 import { collection, addDoc, getFirestore } from "firebase/firestore";
+import Swal from "sweetalert2";
 
 const Cart = () => {
     const { cart, removeItem, totalPrecioCart } = useContext(CartContext);
@@ -12,16 +13,16 @@ const Cart = () => {
         const db = getFirestore();
         const order = {
             buyer: {
-                name: '',
+                name: 'Francisco Baglietto',
                 phone: 0,
-                email: '',
+                email: 'fbagliettopiermattei@gmail.com',
             },
             items: cart,
             total: cart.reduce((valorPasado, valorActual) => valorPasado + (valorActual.precio * valorActual.cantidad), 0),
             date: moment().format(),
         };
         const query = collection(db, 'orders');
-        addDoc(query, order).then(({ id }) => alert(`Felicidades por tu compra. Numero de orden: ${id}`))
+        addDoc(query, order).then(({ id }) => Swal.fire(`Compra exitosa. Numero de orden: ${id}`))
             .catch(() => alert('Tu compra no pudo ser realizada'))
 
     };
@@ -33,8 +34,8 @@ const Cart = () => {
             <div className="mainCart">
                 {cart.length === 0 ? (
                     <div>
-                        <h2>No hay productos en carrito</h2>
-                        <Link to={'/'}>Volver a Comprar</Link>
+                        <h2 className="noHayProducto">No hay productos en carrito</h2>
+                        <Link className="volverAComprar" to={'/'}>Volver a Comprar</Link>
                     </div>
                 ) : (
                     <>
@@ -51,7 +52,7 @@ const Cart = () => {
 
                         ))}
 
-                        {totalPrecioCart() > 0 ? <h3>Total: ${totalPrecioCart()}</h3> : ""}
+                        {totalPrecioCart() > 0 ? <h3 className="totalPrecio">Total: ${totalPrecioCart()}</h3> : ""}
 
                     </>
                 )}

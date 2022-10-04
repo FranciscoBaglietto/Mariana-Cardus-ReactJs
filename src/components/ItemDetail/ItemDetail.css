@@ -7,8 +7,7 @@
     display: inline-block;
     background-color: #ebc79a23;
     padding: .6rem;
-    
-    
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.329);
 }
 
 .img-producto{
