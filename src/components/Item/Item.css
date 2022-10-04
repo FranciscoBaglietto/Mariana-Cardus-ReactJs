@@ -1,6 +1,6 @@
 .img-producto{
-    width: 200px;
-    height: 200px;
+    
+    height: 220px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -13,6 +13,8 @@
     border-radius: 11px;
     box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.445);
     background-color: #ebc79a23;
+    width: 13.2rem;
+    height: 20rem;
 }
 .containerItem:hover{
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.527);
