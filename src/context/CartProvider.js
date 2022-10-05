@@ -22,12 +22,12 @@ const CartProvider = ({ children }) => {
 
     const clear = () => {
         setCart([]);
-        Swal.fire(`El carrito se vacio con exito!`)
+        Swal.fire(`El carrito se vacio con éxito!`)
     }
 
     const removeItem = (itemId) => {
         setCart(cart.filter((producto) => producto.id !== itemId))
-        Swal.fire(`Producto eliminado con exito!`)
+        Swal.fire(`Producto eliminado con éxito!`)
     }
     const totalPrecioCart = () => {
         return cart.reduce((acc, cartItem) => acc + cartItem.precio * cartItem.cantidad, 0);
